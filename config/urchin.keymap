@@ -12,4 +12,9 @@
 #include "zmk-helpers/key-labels/34.h"
 #include "base.keymap"
 
-/{ chosen { zmk,physical-layout = &cuddlykeyboards_ferris_layout; }; };
+/{
+    chosen {
+        zmk,physical-layout = &cuddlykeyboards_ferris_layout;
+        transform = <&default_transform>;
+    };
+};
