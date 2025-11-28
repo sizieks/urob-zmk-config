@@ -10,11 +10,9 @@
 
 #include <layouts/cuddlykeyboards/ferris.dtsi>
 #include "zmk-helpers/key-labels/34.h"
+#include "zmk-helpers/helper.h"
 #include "base.keymap"
 
-/{
-    chosen {
-        zmk,physical-layout = &cuddlykeyboards_ferris_layout;
-        transform = <&default_transform>;
-    };
-};
+/{ chosen { zmk,physical-layout = &cuddlykeyboards_ferris_layout; }; };
+
+ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
