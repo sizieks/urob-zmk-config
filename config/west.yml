@@ -26,11 +26,18 @@ manifest:
       url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: duckyb
+      url-base: https://github.com/duckyb
+    - name: m165437
+      url-base: https://github.com/M165437
 
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
 
     # ZMK modules
     - name: zmk-adaptive-key
@@ -45,6 +52,9 @@ manifest:
       path: modules/zmk/tri-state
     - name: zmk-unicode
       path: modules/zmk/unicode
+    - name: urchin-zmk-module
+      remote: duckyb
+      revision: main
 
     # Only source necessary Zephyr modules. Remove this entire section to restore
     # the default (needed for less common hardware).
